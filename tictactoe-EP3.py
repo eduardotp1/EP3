@@ -4,6 +4,8 @@ class tabuleiro:
     
     def __init__ (self):
         self.window = tk.Tk()
+        self.window.title ('Jogo da Velha!')
+        
         
         botao1=tk.Button(self.window,width=15,height=8)
         botao1.grid(row=0,column=0)
