@@ -5,8 +5,6 @@ Created on Tue Apr 19 16:43:25 2016
 @author: Eduardo Prawita
 """
 
-import numpy as np
-
 class jogo:
     def __init__(self):
         self.matriz=[[0,0,0],[0,0,0],[0,0,0]]
@@ -23,8 +21,9 @@ class jogo:
                 self.rodadas+=1
         print(self.matriz)
         print(self.rodadas)
+        print(self.verifica_ganhador(self.rodadas))
     def verifica_ganhador(self,rodadas):
-        if self.rodadas>=4:#primeira oportunidade de acabar o jogo
+        if self.rodadas>=3:#primeira oportunidade de acabar o jogo
             #quando X eh vencedor
             if self.matriz[0][0]==1 and self.matriz[0][1]==1 and self.matriz[0][2]==1:
                 return 2
@@ -66,13 +65,9 @@ class jogo:
     def limpa_jogadas(self):
        
         if self.verifica_ganhador(self.rodadas)==0:
-            self.matriz=np.array([[0,0,0],[0,0,0],[0,0,0]])
+            self.matriz=([[0,0,0],[0,0,0],[0,0,0]])
         if self.verifica_ganhador(self.rodadas)==1:
-            self.matriz=np.array([[0,0,0],[0,0,0],[0,0,0]])
+            self.matriz=([[0,0,0],[0,0,0],[0,0,0]])
         if self.verifica_ganhador(self.rodadas)==2:
-            self.matriz=np.array([[0,0,0],[0,0,0],[0,0,0]])
-        if self.rodadas%2!=0:
-            self.rodadas=1
-        if self.rodadas%2==0:
-            self.rodadas=0
+            self.matriz=([[0,0,0],[0,0,0],[0,0,0]])
         return self.matriz
