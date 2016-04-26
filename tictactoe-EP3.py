@@ -152,6 +152,7 @@ class tabuleiro:
                    
                    
     def fim (self):
+<<<<<<< HEAD
         if self.jogo.verifica_ganhador == 2 :
             self.proximajogada.configure(text="X ganhou")
             self.jogo.limpa_jogadas()
@@ -162,6 +163,16 @@ class tabuleiro:
             self.proximajogada.configure(text="Empatou")
             self.jogo.limpa_jogadas()
         
+=======
+        self.jogo.verifica_ganhador(self.jogo.rodadas)
+        self.jogo.limpa_jogadas()
+        if self.jogo.verifica_ganhador == 2 :
+            self.proximajogada.configure(text="X ganhou")
+        if self.jogo.verifica_ganhador == 1 :
+            self.proximajogada.configure(text="Bolinha ganhou")
+        else :
+            self.proximajogada.configure(text="Empatou")
+>>>>>>> 9f943f037c47ab9e2991f94ddccf477f6358f8bc
             
         
         
