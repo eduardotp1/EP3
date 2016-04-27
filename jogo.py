@@ -58,7 +58,7 @@ class jogo:
                 return 1
             elif self.matriz[0][2]==2 and self.matriz[1][1]==2 and self.matriz[2][0]==2:
                 return 1   
-            #para as jogadas emmpatadas deve estar na 9,8 no caso por comecar no 0 rodada e nao pode ter 
+            #para as jogadas emmpatadas deve estar na 9 jogada 
             elif self.rodadas==9:
                 return 0
             #dispensei o -1 ja que as unicas possibilidades de jogo eh ganhar, perder ou empatar
